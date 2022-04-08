@@ -6,10 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="horus.png">
-  <link rel=
+  <style>
+	  :root {
+		--docsifytabs-border-color: #ededed;
+		--docsifytabs-tab-highlight-color: rgb(0,116,217);
+	  }
+   </style>
 </head>
 <body>
   <div id="app">	  
@@ -18,10 +23,18 @@
     window.$docsify = {
       name: '',
       repo: '',
-	  relativePath: false
+	  relativePath: false,
+	  tabs: {
+		persist    : true,      // default
+		sync       : true,      // default
+		theme      : 'classic', // default
+		tabComments: true,      // default
+		tabHeadings: true       // default
+	  }
     }	
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 </body>
 </html>

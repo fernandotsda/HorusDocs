@@ -14,6 +14,8 @@ Horus Open APIs are API routes that clients can request from
  http://tsda-horus-YOUR_SERVER.sytes.net:PORT/api/open
 ```
 
+### Final endpoints
+
 
 <span class="tag post"> POST </span>
 
@@ -21,6 +23,76 @@ Horus Open APIs are API routes that clients can request from
 ```
  /report-manager/datalogger
 ```
+
+**In order the send a request, you must be prepared to the following parameters**
+
+<!-- tabs:start -->
+
+#### **Headers**
+
+**Required headers**
+
+|   parameter    	   |  value		   | 
+| :-------       	   |   :----       | 
+| Authorization    	   |  Horus Username  | 
+| Content-Type   	   |  application/json | 
+
+**Horus username is a Horus NMS user**
+
+<span class="icons">&#9888; this user must be logged in Report Manager Horus module</span>
+
+#### **Body**
+
+**Request body**
+
+```json
+{
+  "TEMPLATE_NAME": "Temperatura TSDA",
+  "TEMPLATE_TYPE": "DATALOGGER"
+}
+```
+
+#### **Response**
+
+**Request response example**
+
+```json
+{
+  "TEMPLATE_NAME": {
+  	"NAME": {
+  		TSDA TEMPERATURA: ""
+  	}
+  },
+  "INTERVAL": {
+  	"FROM": {
+  		"30/03/2022 00:00:30": ""
+  	},
+  	"TO": {
+  		"04/04/2022 11:22:27": ""
+  	}
+  },
+  "LATEST_VALUES": {
+  	"Temperatura Rack": {
+  		"04/04/2022 12:01:17": "30.27"
+  	},
+  	"Temperatura Flex": {
+  		"04/04/2022 12:01:17": "30.27"
+  	}
+  },
+  "ANALYSIS": {
+  	"EMPRESA | Temperatura Rack > 24": {
+  		"INSIDE CONDITION": "100%"
+  		"TIME_IN":"7.11:21:56"  	
+  	},
+  	"EMPRESA | Temperatura Rack < 25": {
+  		"INSIDE CONDITION": "3.65%"
+  		"TIME_IN":"06:32:44.5540000"  	
+  	}
+  }  	  
+}
+```
+
+<!-- tabs:end -->
 
 
 
@@ -55,6 +127,8 @@ or
 
 http://my-application:PORT/webhook-route
 ```
+
+**After all that, the given route will be able to receive notification from Horus Server**
 
 
 ### Second case
@@ -117,3 +191,8 @@ http://my-application:PORT/webhook-route
 | alert_id		  	   |  Alarm Id | 
 | alert_name	  	   |  Alarm measure name | 
 | alert_value	  	   |  Alarm value that caused the alarm | 
+
+
+## GitHub pages
+
+**If you reached this documentation in a GitHub repo, take a look at the web page**  [Horus Docs](https://fernandotsda.github.io/HorusDocs/#/)
