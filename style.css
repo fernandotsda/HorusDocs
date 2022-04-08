@@ -1,0 +1,23 @@
+.logo{
+	width: 5%;
+
+}
+
+.tag{
+	padding: 1%;
+	border-radius: 25%;
+	font-weight: bolder;
+	color: #fff;
+}
+
+.post{
+	background-color: #66ee99;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+	.logo{
+		width: 8%;
+	}	
+}
