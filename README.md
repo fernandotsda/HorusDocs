@@ -94,7 +94,7 @@ http://my-application:PORT/webhook-route
   "element_group_name": "TSDA",
   "alert_gen_epoch": "2021-08-25T14:43:40Z",
   "alert_status": "ALARM_HIGH",
-  "alert_severity" "CRITICAL",
+  "alert_severity": "CRITICAL",
   "alert_msg": "Temperatura do shelter | ALARM_HIGH",
   "alert_id": "e13f18fc-6897-4a75-9987-882bf132424d",
   "alert_name": "Temperatura do shelter",
