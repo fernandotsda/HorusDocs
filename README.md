@@ -43,14 +43,38 @@ Horus Open APIs are API routes that clients can request from
 
 **Request body**
 
+<table>
+<tr>
+<th>With interval</th>
+<th>No interval</th>	
+</tr>
+<tr>
 
+<td>
 
 ```json
 {
-  "TEMPLATE_NAME": "EMPRESA REDE",
-  "TEMPLATE_TYPE": "DATALOGGER"
+"TEMPLATE_NAME": "EMPRESA REDE",
+"TEMPLATE_TYPE": "DATALOGGER",
+"INTERVAL": "2022-04-30 : 2022-05-30"
+}
+```			
+</td>
+
+<td>
+
+```json
+{
+"TEMPLATE_NAME": "EMPRESA REDE",
+"TEMPLATE_TYPE": "DATALOGGER"
 }
 ```
+</td>
+
+</tr>
+
+</table>
+
 
 
 
@@ -225,12 +249,37 @@ Horus Open APIs are API routes that clients can request from
 
 **Request body**
 
+<table>
+<tr>
+<th>With interval</th>
+<th>No interval</th>	
+</tr>
+<tr>
+
+<td>
+
 ```json
 {
-  "TEMPLATE_NAME": "EMPRESA REDE",
-  "TEMPLATE_TYPE": "DATALOGGER"
+"TEMPLATE_NAME": "EMPRESA REDE",
+"TEMPLATE_TYPE": "DATALOGGER",
+"INTERVAL": "2022-04-30 : 2022-05-30"
+}
+```			
+</td>
+
+<td>
+
+```json
+{
+"TEMPLATE_NAME": "EMPRESA REDE",
+"TEMPLATE_TYPE": "DATALOGGER"
 }
 ```
+</td>
+
+</tr>
+
+</table>
 
 
 
