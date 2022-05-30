@@ -98,42 +98,52 @@ Horus Open APIs are API routes that clients can request from
     },
     "LATEST_VALUES": {
         "Tensão Fase R": {
-            "120,85": "30/05/2022 08:59:12"
+            "VALUE": "120,13",
+            "DATE": "30/05/2022 11:25:41"
         },
         "Tensão Fase S": {
-            "116,82": "30/05/2022 08:59:12"
+            "VALUE": "119,19",
+            "DATE": "30/05/2022 11:25:41"
         }
     },
     "MAX_VALUE": {
         "Tensão Fase R": {
-            "128,83": "26/05/2022 21:20:04"
+            "VALUE": "128,83",
+            "DATE": "26/05/2022 21:20:04"
         },
         "Tensão Fase S": {
-            "126,98": "27/05/2022 06:52:48"
+            "VALUE": "126,98",
+            "DATE": "27/05/2022 06:52:48"
         }
     },
     "MIN_VALUE": {
         "Tensão Fase R": {
-            "107,93": "26/05/2022 17:31:38"
+            "VALUE": "107,93",
+            "DATE": "26/05/2022 17:31:38"
         },
         "Tensão Fase S": {
-            "106,19": "26/05/2022 21:21:05"
+            "VALUE": "106,19",
+            "DATE": "26/05/2022 21:21:05"
         }
     },
     "AVG_VALUE": {
         "Tensão Fase R": {
-            "120,753": ""
+            "VALUE": "120,73",
+            "DATE": ""
         },
         "Tensão Fase S": {
-            "120,61": ""
+            "VALUE": "120,562",
+            "DATE": ""
         }
     },
     "TOTAL_TIME": {
         "Tensão Fase R": {
-            "4:19:18:23": ""
+            "VALUE": "4:21:44:52",
+            "DATE": ""
         },
         "Tensão Fase S": {
-            "4:19:18:23": ""
+            "VALUE": "4:21:44:52",
+            "DATE": ""
         }
     },
     "INTERVAL": {
@@ -141,13 +151,17 @@ Horus Open APIs are API routes that clients can request from
             "25/05/2022 13:40:49": ""
         },
         "TO": {
-            "30/05/2022 08:59:12": ""
+            "30/05/2022 11:25:41": ""
         }
     },
     "ANALYSIS": {
         "EMPRESA|Tensão Fase R > 121": {
-            "INSIDE_CONDITION": "58,65%",
-            "TIME_IN": "2.19:37:35.7800000"
+            "INSIDE_CONDITION": "57,52%",
+            "TIME_IN": "2.19:43:36.1080000"
+        },
+        "EMPRESA|Tensão Fase S > 121": {
+            "INSIDE_CONDITION": "51,55%",
+            "TIME_IN": "2.12:41:35.9910000"
         }
     }
 }
@@ -166,42 +180,52 @@ Horus Open APIs are API routes that clients can request from
     },
     "LATEST_VALUES": {
         "Tensão Fase R": {
-            "120,85": "30/05/2022 08:59:12"
+            "VALUE": "120,13",
+            "DATE": "30/05/2022 11:25:41"
         },
         "Tensão Fase S": {
-            "116,82": "30/05/2022 08:59:12"
+            "VALUE": "119,19",
+            "DATE": "30/05/2022 11:25:41"
         }
     },
     "MAX_VALUE": {
         "Tensão Fase R": {
-            "128,83": "26/05/2022 21:20:04"
+            "VALUE": "128,83",
+            "DATE": "26/05/2022 21:20:04"
         },
         "Tensão Fase S": {
-            "126,98": "27/05/2022 06:52:48"
+            "VALUE": "126,98",
+            "DATE": "27/05/2022 06:52:48"
         }
     },
     "MIN_VALUE": {
         "Tensão Fase R": {
-            "107,93": "26/05/2022 17:31:38"
+            "VALUE": "107,93",
+            "DATE": "26/05/2022 17:31:38"
         },
         "Tensão Fase S": {
-            "106,19": "26/05/2022 21:21:05"
+            "VALUE": "106,19",
+            "DATE": "26/05/2022 21:21:05"
         }
     },
     "AVG_VALUE": {
         "Tensão Fase R": {
-            "120,753": ""
+            "VALUE": "120,73",
+            "DATE": ""
         },
         "Tensão Fase S": {
-            "120,61": ""
+            "VALUE": "120,562",
+            "DATE": ""
         }
     },
     "TOTAL_TIME": {
         "Tensão Fase R": {
-            "4:19:18:23": ""
+            "VALUE": "4:21:44:52",
+            "DATE": ""
         },
         "Tensão Fase S": {
-            "4:19:18:23": ""
+            "VALUE": "4:21:44:52",
+            "DATE": ""
         }
     },
     "INTERVAL": {
@@ -209,7 +233,7 @@ Horus Open APIs are API routes that clients can request from
             "25/05/2022 13:40:49": ""
         },
         "TO": {
-            "30/05/2022 08:59:12": ""
+            "30/05/2022 11:25:41": ""
         }
     }
 }
@@ -269,10 +293,12 @@ Horus Open APIs are API routes that clients can request from
     },
     "LATEST_VALUES": {
         "Tensão Fase R": {
-            "118.39": "04/04/2022 10:00:40"
+            "VALUE": "118.39",
+            "DATE": "04/04/2022 10:00:40"
         },
         "Tensão Fase S": {
-            "118.84": "04/04/2022 10:00:40"
+            "VALUE": "118.84",
+            "DATE": "04/04/2022 10:00:40"
         }
     }
 }
