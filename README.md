@@ -11,7 +11,7 @@ Horus Open APIs are API routes that clients can request from
 **The base route is defined as:** 
 
 ```
- http://tsda-horus-YOUR_SERVER.sytes.net:PORT/api/open
+ https://tsda-horus-YOUR_SERVER.sytes.net:PORT/api/open
 ```
 
 ### Final endpoints
@@ -24,7 +24,187 @@ Horus Open APIs are API routes that clients can request from
  /report-manager/datalogger
 ```
 
-**In order the send a request, you must be prepared to the following parameters**
+<!-- tabs:start -->
+
+#### **Headers**
+
+**Required headers**
+
+|   parameter    	   |  value		   | 
+| :-------       	   |   :----       | 
+| Authorization    	   |  Horus Username  | 
+| Content-Type   	   |  application/json | 
+
+**Horus username is a Horus NMS user**
+
+<span class="icons">&#9888; this user must be logged in Report Manager Horus module</span>
+
+#### **Body**
+
+**Request body**
+
+
+
+```json
+{
+  "TEMPLATE_NAME": "EMPRESA REDE",
+  "TEMPLATE_TYPE": "DATALOGGER"
+}
+```
+
+
+
+#### **Response**
+
+<table>
+<tr>
+<th>With analysis</th>
+<th>No analysis</th>
+</tr>
+	
+<tr>
+<td>
+
+```json
+	{
+    "TEMPLATE_NAME": {
+        "NAME": {
+            "EMPRESA REDE": ""
+        }
+    },
+    "LATEST_VALUES": {
+        "Tensão Fase R": {
+            "120,85": "30/05/2022 08:59:12"
+        },
+        "Tensão Fase S": {
+            "116,82": "30/05/2022 08:59:12"
+        }
+    },
+    "MAX_VALUE": {
+        "Tensão Fase R": {
+            "128,83": "26/05/2022 21:20:04"
+        },
+        "Tensão Fase S": {
+            "126,98": "27/05/2022 06:52:48"
+        }
+    },
+    "MIN_VALUE": {
+        "Tensão Fase R": {
+            "107,93": "26/05/2022 17:31:38"
+        },
+        "Tensão Fase S": {
+            "106,19": "26/05/2022 21:21:05"
+        }
+    },
+    "AVG_VALUE": {
+        "Tensão Fase R": {
+            "120,753": ""
+        },
+        "Tensão Fase S": {
+            "120,61": ""
+        }
+    },
+    "TOTAL_TIME": {
+        "Tensão Fase R": {
+            "4:19:18:23": ""
+        },
+        "Tensão Fase S": {
+            "4:19:18:23": ""
+        }
+    },
+    "INTERVAL": {
+        "FROM": {
+            "25/05/2022 13:40:49": ""
+        },
+        "TO": {
+            "30/05/2022 08:59:12": ""
+        }
+    },
+    "ANALYSIS": {
+        "EMPRESA|Tensão Fase R > 121": {
+            "INSIDE_CONDITION": "58,65%",
+            "TIME_IN": "2.19:37:35.7800000"
+        }
+    }
+}
+```
+</td>
+		
+		
+<td>
+
+```json
+	{
+    "TEMPLATE_NAME": {
+        "NAME": {
+            "EMPRESA REDE": ""
+        }
+    },
+    "LATEST_VALUES": {
+        "Tensão Fase R": {
+            "120,85": "30/05/2022 08:59:12"
+        },
+        "Tensão Fase S": {
+            "116,82": "30/05/2022 08:59:12"
+        }
+    },
+    "MAX_VALUE": {
+        "Tensão Fase R": {
+            "128,83": "26/05/2022 21:20:04"
+        },
+        "Tensão Fase S": {
+            "126,98": "27/05/2022 06:52:48"
+        }
+    },
+    "MIN_VALUE": {
+        "Tensão Fase R": {
+            "107,93": "26/05/2022 17:31:38"
+        },
+        "Tensão Fase S": {
+            "106,19": "26/05/2022 21:21:05"
+        }
+    },
+    "AVG_VALUE": {
+        "Tensão Fase R": {
+            "120,753": ""
+        },
+        "Tensão Fase S": {
+            "120,61": ""
+        }
+    },
+    "TOTAL_TIME": {
+        "Tensão Fase R": {
+            "4:19:18:23": ""
+        },
+        "Tensão Fase S": {
+            "4:19:18:23": ""
+        }
+    },
+    "INTERVAL": {
+        "FROM": {
+            "25/05/2022 13:40:49": ""
+        },
+        "TO": {
+            "30/05/2022 08:59:12": ""
+        }
+    }
+}
+```
+
+</td>
+</tr>
+
+</table>
+
+<!-- tabs:end -->
+
+<hr>
+
+```
+ /report-manager/latest-values
+```
+
+**This route requests real-time data. For this to happen, a screen must be open in Horus Viewer**
 
 <!-- tabs:start -->
 
@@ -47,53 +227,34 @@ Horus Open APIs are API routes that clients can request from
 
 ```json
 {
-  "TEMPLATE_NAME": "Temperatura TSDA",
+  "TEMPLATE_NAME": "EMPRESA REDE",
   "TEMPLATE_TYPE": "DATALOGGER"
 }
 ```
 
+
+
 #### **Response**
 
-**Request response example**
-
 ```json
-{
-  "TEMPLATE_NAME": {
-  	"NAME": {
-  		TSDA TEMPERATURA: ""
-  	}
-  },
-  "INTERVAL": {
-  	"FROM": {
-  		"30/03/2022 00:00:30": ""
-  	},
-  	"TO": {
-  		"04/04/2022 11:22:27": ""
-  	}
-  },
-  "LATEST_VALUES": {
-  	"Temperatura Rack": {
-  		"04/04/2022 12:01:17": "30.27"
-  	},
-  	"Temperatura Flex": {
-  		"04/04/2022 12:01:17": "30.27"
-  	}
-  },
-  "ANALYSIS": {
-  	"EMPRESA | Temperatura Rack > 24": {
-  		"INSIDE CONDITION": "100%"
-  		"TIME_IN":"7.11:21:56"  	
-  	},
-  	"EMPRESA | Temperatura Rack < 25": {
-  		"INSIDE CONDITION": "3.65%"
-  		"TIME_IN":"06:32:44.5540000"  	
-  	}
-  }  	  
+	{
+    "TEMPLATE_NAME": {
+        "NAME": {
+            "EMPRESA REDE": ""
+        }
+    },
+    "LATEST_VALUES": {
+        "Tensão Fase R": {
+            "118.39": "04/04/2022 10:00:40"
+        },
+        "Tensão Fase S": {
+            "118.84": "04/04/2022 10:00:40"
+        }
+    }
 }
 ```
 
 <!-- tabs:end -->
-
 
 
 > ## Webhooks
