@@ -82,7 +82,7 @@ Horus Open APIs are API routes that clients can request from
 
 <table>
 <tr>
-<th>With analysis</th>
+<th>With analysis</th> 
 <th>No analysis</th>
 </tr>
 	
