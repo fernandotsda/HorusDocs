@@ -37,7 +37,7 @@ Horus Open APIs are API routes that clients can request from
 
 **Horus username is a Horus NMS user**
 
-<span class="icons">&#9888; this user must be logged in Report Manager Horus module</span>
+<span class="icons">&#9888; this user must be authorized on Horus Server to access this route</span>
 
 #### **Body**
 
@@ -93,7 +93,7 @@ Horus Open APIs are API routes that clients can request from
 	{
     "TEMPLATE_NAME": {
         "NAME": {
-            "EMPRESA REDE": ""
+            "VALUE": "EMPRESA REDE"
         }
     },
     "LATEST_VALUES": {
@@ -148,10 +148,10 @@ Horus Open APIs are API routes that clients can request from
     },
     "INTERVAL": {
         "FROM": {
-            "25/05/2022 13:40:49": ""
+            "DATE_TIME": "25/05/2022 13:40:49"
         },
         "TO": {
-            "30/05/2022 11:25:41": ""
+            "DATE_TIME": "30/05/2022 11:25:41"
         }
     },
     "ANALYSIS": {
@@ -175,7 +175,7 @@ Horus Open APIs are API routes that clients can request from
 	{
     "TEMPLATE_NAME": {
         "NAME": {
-            "EMPRESA REDE": ""
+            "VALUE": "EMPRESA REDE"
         }
     },
     "LATEST_VALUES": {
@@ -230,10 +230,10 @@ Horus Open APIs are API routes that clients can request from
     },
     "INTERVAL": {
         "FROM": {
-            "25/05/2022 13:40:49": ""
+            "DATE_TIME": "25/05/2022 13:40:49"
         },
         "TO": {
-            "30/05/2022 11:25:41": ""
+            "DATE_TIME": "30/05/2022 11:25:41"
         }
     }
 }
@@ -244,9 +244,74 @@ Horus Open APIs are API routes that clients can request from
 
 </table>
 
+#### **Response Errors**
+
+<table>
+
+<tr>
+<th>User not authorized on Horus Server</th>
+<th>User not found on Horus Server</th>
+</tr>
+
+<tr>
+<td>
+
+```json
+{
+    "Message": "UNAUTHORIZED"
+}
+```
+
+</td>
+
+<td>
+
+```json
+{
+    "Message": "ERROR! USER NOT FOUND"
+}
+```
+
+</td>
+
+</tr>
+
+<tr>
+<th>Template name not set or empty</th>
+<th>Template doesn't exist</th>
+</tr>
+
+<tr>
+
+<td>
+
+```json
+{
+    "Message": "ERROR! NO TEMPLATE NAME"
+}
+```
+
+</td>
+
+<td>
+
+```json
+{
+    "Message": "ERROR! TEMPLATE DOESN'T EXIST"
+}
+```
+
+</td>
+
+</tr>
+</table>
+
+
 <!-- tabs:end -->
 
 <hr>
+
+<span class="tag post"> POST </span>
 
 ```
  /report-manager/latest-values
@@ -267,7 +332,7 @@ Horus Open APIs are API routes that clients can request from
 
 **Horus username is a Horus NMS user**
 
-<span class="icons">&#9888; this user must be logged in Report Manager Horus module</span>
+<span class="icons">&#9888; this user must be authorized on Horus Server to access this route</span>
 
 #### **Body**
 
@@ -288,7 +353,7 @@ Horus Open APIs are API routes that clients can request from
 	{
     "TEMPLATE_NAME": {
         "NAME": {
-            "EMPRESA REDE": ""
+            "VALUE": "EMPRESA REDE"
         }
     },
     "LATEST_VALUES": {
@@ -304,6 +369,68 @@ Horus Open APIs are API routes that clients can request from
 }
 ```
 
+#### **Response Errors**
+
+<table>
+
+<tr>
+<th>User not authorized on Horus Server</th>
+<th>User not found on Horus Server</th>
+</tr>
+
+<tr>
+<td>
+
+```json
+{
+    "Message": "UNAUTHORIZED"
+}
+```
+
+</td>
+
+<td>
+
+```json
+{
+    "Message": "ERROR! USER NOT FOUND"
+}
+```
+
+</td>
+
+</tr>
+
+<tr>
+<th>Template name not set or empty</th>
+<th>Template doesn't exist</th>
+</tr>
+
+<tr>
+
+<td>
+
+```json
+{
+    "Message": "ERROR! NO TEMPLATE NAME"
+}
+```
+
+</td>
+
+<td>
+
+```json
+{
+    "Message": "ERROR! TEMPLATE DOESN'T EXIST"
+}
+```
+
+</td>
+
+</tr>
+</table>
+
 <!-- tabs:end -->
 
 
@@ -315,7 +442,7 @@ Webhook is a functionality based on the pub-sub concept
 
 **Since version 1.4.7, the Horus System is able to send information to different systems or routes. Based on the Webhook concept, Horus NMS sends equipments alarm notification data for those who have subscribed to receive**
 
-**As Webhooks can be treated more as a concept than a functionality, in this documentation we will explain how users can receive Webhooks notifications from Horus Server**
+**In this documentation we will explain how users can receive Webhooks notifications from Horus Server**
 
 ### First case
 
@@ -346,7 +473,7 @@ http://my-application:PORT/webhook-route
 
 #### TSDA Horus Server
 
-**When using TSDA Horus Server, the steps are dastacly reduced**
+**When using TSDA Horus Server, the steps are drastacly reduced**
 
 1. Contact TSDA and inform an user to be associated to the Webhooks
 
